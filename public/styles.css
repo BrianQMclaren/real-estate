@@ -1,0 +1,15 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: 'Helvetica Neue', sans-serif;
+}
+
+a {
+  color: white;
+}
+
+.header {
+  background: #0c002b;
+}
