@@ -1,15 +1,1 @@
-* {
-  box-sizing: border-box;
-}
-
-html {
-  font-family: 'Helvetica Neue', sans-serif;
-}
-
-a {
-  color: white;
-}
-
-.header {
-  background: #0c002b;
-}
+@import url(/normalize.css);@import url(/base/_variables);@import url(/base/_mixins);@import url(/base/_global);

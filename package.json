@@ -6,9 +6,8 @@
   "license": "MIT",
   "scripts": {
     "build": "webpack",
-    "dev": "webpack-dev-server",
-    "format":
-      "prettier --write --single-quote --print-width=120 --parser=flow --tab-width=2 \"js/**/*.{js,jsx}\"",
+    "dev": "webpack-dev-server --open",
+    "format": "prettier --write --single-quote --print-width=120 --parser=flow --tab-width=2 \"js/**/*.{js,jsx}\"",
     "lint": "eslint **/*.{js,jsx} --quiet",
     "test": "jest",
     "test:coverage": "jest --coverage",
@@ -26,6 +25,7 @@
     "enzyme-to-json": "^3.1.1",
     "express": "^4.16.2",
     "lodash": "^4.17.4",
+    "normalize.css": "^7.0.0",
     "preact": "^8.2.5",
     "preact-compat": "^3.17.0",
     "prop-types": "^15.6.0",
@@ -45,9 +45,13 @@
     "webpack-hot-middleware": "^2.20.0"
   },
   "jest": {
-    "setupFiles": ["raf/polyfill", "./js/__test__/setupTests.js"]
+    "setupFiles": [
+      "raf/polyfill",
+      "./js/__test__/setupTests.js"
+    ]
   },
   "devDependencies": {
+    "autoprefixer": "^7.2.1",
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.0",
     "babel-eslint": "^8.0.1",
@@ -58,6 +62,7 @@
     "babel-plugin-transform-es2015-modules-commonjs": "^6.26.0",
     "babel-preset-env": "^1.6.1",
     "babel-preset-react": "^6.24.1",
+    "css-loader": "^0.28.7",
     "enzyme": "^3.1.0",
     "eslint": "^4.7.2",
     "eslint-config-airbnb": "^15.1.0",
@@ -70,11 +75,20 @@
     "eslint-plugin-jsx-a11y": "5.1.1",
     "eslint-plugin-prettier": "^2.3.1",
     "eslint-plugin-react": "^7.4.0",
+    "extract-text-webpack-plugin": "^3.0.2",
     "flow-bin": "^0.56.0",
     "jest": "^21.2.1",
     "nodemon": "^1.12.1",
+    "postcss-hexrgba": "^1.0.0",
+    "postcss-import": "^11.0.0",
+    "postcss-loader": "^2.0.9",
+    "postcss-mixins": "^6.2.0",
+    "postcss-nested": "^2.1.2",
+    "postcss-simple-vars": "^4.1.0",
     "prettier": "^1.7.2",
     "react-test-renderer": "16",
+    "style-loader": "^0.19.0",
+    "uglifyjs-webpack-plugin": "^1.1.2",
     "webpack-dev-server": "^2.9.1"
   }
 }

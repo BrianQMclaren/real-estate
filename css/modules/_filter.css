@@ -1,0 +1,54 @@
+.filters {
+  .inside {
+    padding: 20px;
+    max-width: 300px;
+    background: rgba(249, 248, 244, 1);
+  }
+
+  & select {
+    background: transparent;
+    padding: 10px;
+    color: #1b1b1b;
+    display: block;
+    font-size: 14px;
+    width: 100%;
+    margin-bottom: 25px;
+    height: 35px;
+    outline: none;
+  }
+
+  &.title {
+    display: block;
+    font-size: 0.9em;
+  }
+
+  &.extras {
+    label {
+      display: block;
+      width: 100%;
+      padding: 10px 0;
+      input[type='checkbox'] {
+        float: right;
+        outline: none;
+      }
+    }
+  }
+}
+
+input[type='text'] {
+  display: inline-block;
+}
+
+#slidecontainer {
+  width: 100%;
+  span {
+    display: block;
+  }
+}
+
+.filters .price,
+.filters .floorspace,
+.filters .radius {
+  width: 260px;
+  margin-bottom: 25px;
+}

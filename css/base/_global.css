@@ -1,0 +1,50 @@
+body {
+  font-family: 'proxima-soft', sans-serif;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+  padding: 10px 20px;
+}
+
+h4 {
+  font-size: 0.9em;
+  margin-bottom: 25px;
+  text-transform: uppercase;
+  color: $gray;
+}
+
+.wrapper {
+  width: 100%;
+  max-width: 1100px;
+  margin: 2.5em auto;
+  color: white;
+  overflow: hidden;
+}
+
+.register-btn {
+  background-color: $pink;
+  padding: 10px 15px;
+  color: white;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.logo {
+  float: left;
+  display: inline;
+}
+
+nav {
+  float: right;
+}
