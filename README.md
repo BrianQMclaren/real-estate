@@ -1,7 +1,7 @@
 # Real-Estate-App
 
-A one page web app built with react, jest, flow, and webpack. It's an app that
-users to search for homes in there area. Still in development...
+A web app built with react, jest, flow, and webpack. Ideally users can search
+for homes in there area. Still in development...
 
 ### Prerequisites
 
