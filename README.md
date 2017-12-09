@@ -3,6 +3,14 @@
 A web app built with react, jest, flow, and webpack. Ideally users can search
 for homes in there area. Still in development...
 
+### Inspiration
+
+![realestate app](https://user-images.githubusercontent.com/19230394/33793001-2b982b32-dc7d-11e7-99a6-7c7ae977d836.jpg)
+
+### In Development
+
+![real estate app](https://user-images.githubusercontent.com/19230394/33792990-df5d11b0-dc7c-11e7-82db-be56b21df772.png)
+
 ### Prerequisites
 
 What things you need to install software wise and how to install them
