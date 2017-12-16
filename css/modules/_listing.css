@@ -1,0 +1,41 @@
+.listings {
+  max-width: 975px;
+  width: 100%;
+  float: left;
+  padding: 35px;
+}
+.listing-heading {
+  h2 {
+    display: inline-block;
+    font-size: 30px;
+    color: $purple;
+    font-weight: lighter;
+    margin: 0;
+  }
+  input {
+    float: right;
+    margin-top: 34px;
+    padding-right: 70px;
+    text-decoration: underline;
+    border: 0;
+    border-bottom: 1px solid $gray;
+    outline: none;
+    opacity: 0.4;
+  }
+}
+
+.results {
+  color: $gray;
+  font-weight: 100;
+}
+
+.listing-sortOptions {
+  float: right;
+  .sortby {
+    width: 175px;
+    height: 40px;
+  }
+  .view {
+    display: inline-block;
+  }
+}

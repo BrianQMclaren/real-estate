@@ -1,16 +1,18 @@
 import React from 'react';
 
 const Listings = () => (
-  <div className="Listings">
+  <div className="listings">
     <section className="listing-heading">
+      <h2>Short stay</h2>
       <input type="text" name="search" />
+      <hr />
     </section>
     <section className="listing-sort">
-      <div>390 results found</div>
+      <span className="results">3920 results found</span>
       <div className="listing-sortOptions">
         <select name="sortby" className="sortby">
-          <option value="price-asc">Highest Price</option>
-          <option value="price-asc">Lowest Price</option>
+          <option value="price-asc">Date Descending</option>
+          <option value="price-asc">Date Ascending</option>
         </select>
         <div className="view">
           <i className="fa fa-th-list" aria-hidden="true" />

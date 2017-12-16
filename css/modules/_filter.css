@@ -1,8 +1,10 @@
 .filters {
+  float: left;
+  background: rgba(249, 248, 244, 1);
+
   .inside {
     padding: 20px;
     max-width: 300px;
-    background: rgba(249, 248, 244, 1);
   }
 
   & select {
@@ -27,6 +29,7 @@
       display: block;
       width: 100%;
       padding: 10px 0;
+      float: right;
       input[type='checkbox'] {
         float: right;
         outline: none;

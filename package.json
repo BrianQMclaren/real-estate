@@ -6,8 +6,9 @@
   "license": "MIT",
   "scripts": {
     "build": "webpack",
-    "dev": "webpack-dev-server --open",
-    "format": "prettier --write --single-quote --print-width=120 --parser=flow --tab-width=2 \"js/**/*.{js,jsx}\"",
+    "dev": "webpack-dev-server",
+    "format":
+      "prettier --write --single-quote --print-width=120 --parser=flow --tab-width=2 \"js/**/*.{js,jsx}\"",
     "lint": "eslint **/*.{js,jsx} --quiet",
     "test": "jest",
     "test:coverage": "jest --coverage",
@@ -45,10 +46,7 @@
     "webpack-hot-middleware": "^2.20.0"
   },
   "jest": {
-    "setupFiles": [
-      "raf/polyfill",
-      "./js/__test__/setupTests.js"
-    ]
+    "setupFiles": ["raf/polyfill", "./js/__test__/setupTests.js"]
   },
   "devDependencies": {
     "autoprefixer": "^7.2.1",
