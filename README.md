@@ -11,6 +11,8 @@ for homes in there area. Still in development...
 
 ![real estate app](https://user-images.githubusercontent.com/19230394/33792990-df5d11b0-dc7c-11e7-82db-be56b21df772.png)
 
+![screen shot 2018-01-03 at 10 29 23 am](https://user-images.githubusercontent.com/19230394/34526652-1e918d72-f071-11e7-9e82-ce40501fc722.png)
+
 ### Prerequisites
 
 What things you need to install software wise and how to install them
