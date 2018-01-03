@@ -18,10 +18,9 @@ a {
 }
 
 h4 {
-  font-size: 0.9em;
+  font-size: 1rem;
   margin-bottom: 25px;
-  text-transform: uppercase;
-  color: $gray;
+  color: $lightbrown;
 }
 
 hr {
@@ -29,8 +28,7 @@ hr {
   margin: 20px 0;
   border: 0;
   height: 1px;
-  background: $gray;
-  opacity: 0.4;
+  background: $lightgray;
 }
 
 .fa {

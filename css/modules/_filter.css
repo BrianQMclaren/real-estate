@@ -1,6 +1,6 @@
 .filters {
   float: left;
-  background: rgba(249, 248, 244, 1);
+  background: $offgray;
 
   .inside {
     padding: 20px;
@@ -10,7 +10,7 @@
   & select {
     background: transparent;
     padding: 10px;
-    color: #1b1b1b;
+    color: $lightbrown;
     display: block;
     font-size: 14px;
     width: 100%;
@@ -19,9 +19,29 @@
     outline: none;
   }
 
+  select.filters.bedroom {
+    margin-bottom: 50px;
+  }
+
+  .filter-title {
+    color: $boldgray;
+    font-size: 1.1rem;
+  }
+
+  .title {
+    color: $lightbrown;
+    text-transform: capitalize;
+  }
+
   &.title {
     display: block;
     font-size: 0.9em;
+
+  }
+
+  option {
+    color: $lightbrown;
+    font-weight: 600;
   }
 
   &.extras {
@@ -33,6 +53,9 @@
       input[type='checkbox'] {
         float: right;
         outline: none;
+      }
+      span {
+        color: $boldgray;
       }
     }
   }
@@ -53,5 +76,6 @@ input[type='text'] {
 .filters .floorspace,
 .filters .radius {
   width: 260px;
+  margin-top: 15px;
   margin-bottom: 25px;
 }

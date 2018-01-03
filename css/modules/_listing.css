@@ -8,25 +8,30 @@
   h2 {
     display: inline-block;
     font-size: 30px;
-    color: $purple;
-    font-weight: lighter;
+    color: $boldgray;
+    font-weight: 100;
     margin: 0;
   }
   input {
+    color: $lightgray;
+    font-size: 1.2rem;
     float: right;
-    margin-top: 34px;
+    margin-top: 30px;
     padding-right: 70px;
-    text-decoration: underline;
+    text-decoration: none;
     border: 0;
-    border-bottom: 1px solid $gray;
+    border-bottom: 1px solid $lightgray;
     outline: none;
-    opacity: 0.4;
   }
 }
 
 .results {
-  color: $gray;
+  color: $darkgray;
   font-weight: 100;
+}
+
+.listing-sort {
+  margin-bottom: 50px;
 }
 
 .listing-sortOptions {
@@ -38,4 +43,166 @@
   .view {
     display: inline-block;
   }
+}
+
+.listing-results {
+  margin-bottom: 60px;
+  .listing {
+    background: #fff;
+    position: relative;
+    box-shadow: 0px 9px 54px -4px rgba(224,224,224,1);
+  }
+  .listing-img {
+    color: #fff;
+    padding: 15px;
+    height: 200px;
+    background: url(https://i.ytimg.com/vi/J4rBDsimsmQ/maxresdefault.jpg) no-repeat center center;
+    background-size: cover;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    &:hover {
+      .details {
+        opacity: 1;
+      }
+      .address {
+        opacity: 0;
+      }
+    }
+  }
+  .address {
+    font-size: 1.3rem;
+    position: absolute;
+    bottom: 120px;
+    opacity: 1;
+    transition: all .8s ease-in-out;
+    color: #fff;
+  }
+  .details {
+    height: 200px;
+    opacity: 0;
+    transition: all .6s ease-in-out;
+    padding: 30px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: rgba(87,52,170, .8);
+    background: linear-gradient(135deg, rgba(87,52,170, .8) 1%,rgba(189,128,242, .8) 100%);
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+  }
+  .user-img {
+    background: url(https://i.ytimg.com/vi/J4rBDsimsmQ/maxresdefault.jpg) no-repeat center center;
+    background-size: cover;
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    border: 2px solid #fff;
+    border-radius: 50%;
+  }
+  .user-details {
+    vertical-align: top;
+    display: inline-block;
+    .user-name {
+      font-weight: 300;
+      font-size: 0.9rem;
+      display: block;
+      color: rgba(255,255,255, 1);
+      margin-top: 3px;
+      margin-bottom: 5px;
+    }
+    .post-date {
+      display: block;
+      font-size: 0.9rem;
+      color: rgba(255,255,255, .7);
+    }
+  }
+  .listing-details {
+    margin-top: 20px;
+      .fa {
+        font-size: 20px;
+        display: inline-block;
+        margin-right: 15px;
+        padding-left: 0;
+      }
+      span {
+        font-size: 0.8rem;
+        font-weight: 300;
+        display: inline-block;
+        vertical-align: top;
+        position: relative;
+        top: 11px;
+      }
+  }
+
+  .bedrooms {
+    .fa {
+      display: inline-block;
+    }
+    span {
+      display: inline-block;
+    }
+  }
+  .listing-rent {
+    padding: 20px 15px;
+    .price {
+      font-size: 1rem;
+      display: block;
+      margin-bottom: 10px;
+      color: $darkgray;
+    }
+    .location {
+      font-size: 1.2rem;
+      display: block;
+      color: $lightgray;
+    }
+  }
+}
+
+#listing-pagination {
+  text-align: center;
+  .pagination-pages {
+    padding: 0;
+    list-style-type: none;
+    display: inline-block;
+    margin: 0 auto;
+    background: #fff;
+    box-shadow: 0px 9px 54px -4px rgba(224,224,224,1);
+  }
+  li {
+    display: inline-block;
+    padding: 20px 30px;
+    cursor: pointer;
+    color: $darkgray;
+    &.active {
+      background: $pink;
+      border-radius: 50%;
+      padding: 10px;
+      height: 36px;
+      width: 36px;
+      color: #fff;
+      font-weight: 700;
+
+    }
+    &.prev,
+    &.next {
+      color: $blue;
+    }
+    &.prev {
+      opacity: 0.4;
+    }
+  }
+}
+
+.col-md-3 {
+  width: 33.33%;
+  padding: 0 15px;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.col-md-9 {
+  width: 75%;
+  display: inline-block;
 }

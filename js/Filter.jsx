@@ -3,49 +3,30 @@ import React from 'react';
 const Filter = () => (
   <div className="filters">
     <div className="inside">
-      <h4>Filter</h4>
+      <h4 className="filter-title">Filter</h4>
       <select name="neighbourhood" className="filters neighbourhood">
-        <option>Harlem</option>
+        <option>Neighbourhood</option>
       </select>
       <select name="housetype" className="filters housetype">
-        <option>Brownstone</option>
+        <option>Type of House</option>
       </select>
       <select name="bedroom" className="filters bedroom">
-        <option>3 BR</option>
+        <option>Interior</option>
       </select>
-      <div id="slidecontainer" className="filters-price">
-        <span className="title">Price</span>
-        <input
-          name="price"
-          type="range"
-          min="1"
-          max="100"
-          value="55"
-          className="price"
-        />
+      <div id="slidecontainer">
+        <div className="price">
+        <span className="title">price</span>
+        <input name="price" type="range" min="1" max="100" value="55" className="price" />
       </div>
-      <div id="slidecontainer" className="floor-space">
-        <span className="title">Floorspace</span>
-        <input
-          name="floorspace"
-          type="range"
-          min="1"
-          max="100"
-          value="35"
-          className="floorspace"
-        />
+      <div className="floorspace">
+        <span className="title">floor space</span>
+        <input name="floorspace" type="range" min="1" max="100" value="35" className="floorspace" />
       </div>
-      <div id="slidecontainer" className="floor-radius">
-        <span className="title">Radius</span>
-        <input
-          name="radius"
-          type="range"
-          min="1"
-          max="100"
-          value="75"
-          className="radius"
-        />
+      <div className="radius">
+        <span className="title">radius</span>
+        <input name="radius" type="range" min="1" max="100" value="75" className="radius" />
       </div>
+    </div>
       <div className="filters extras">
         <h4>Facilities</h4>
         <label htmlFor="extras">
