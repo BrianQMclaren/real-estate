@@ -2,9 +2,11 @@
   float: left;
   background: $offgray;
 
+
   .inside {
     padding: 20px;
     max-width: 300px;
+    height: 1000px;
   }
 
   & select {

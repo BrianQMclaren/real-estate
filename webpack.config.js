@@ -3,16 +3,16 @@ const webpack = require('webpack');
 const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
-module.exports = {
+
+const config = {
   context: __dirname,
   entry: [
     'react-hot-loader/patch',
-    'webpack-dev-server/client?http://localhost:8080',
-    'webpack/hot/only-dev-server',
     './js/app.js',
     './js/ClientApp.jsx'
   ],
-  devtool: 'cheap-eval-source-map',
+  devtool:
+    process.env.NODE_ENV === "development" ? "cheap-eval-source-map" : false,
   output: {
     path: path.join(__dirname, 'public'),
     filename: 'bundle.js',
@@ -24,7 +24,7 @@ module.exports = {
     historyApiFallback: true
   },
   resolve: {
-    extensions: ['.js', '.jsx', '.json']
+    extensions: ['.js', '.jsx', '.json', 'css']
     // alias: {
     //   react: 'preact-compat',
     //   'react-dom': 'preact-compat',
@@ -67,3 +67,10 @@ module.exports = {
     ]
   }
 };
+
+if (process.env.NODE_ENV === "development") {
+  config.entry.unshift(
+    "webpack-hot-middleware/client?path=/__webpack_hmr&timeout=20000"
+  );
+}
+module.exports = config;

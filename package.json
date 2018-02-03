@@ -5,12 +5,13 @@
   "author": "Brian Mclaren",
   "license": "MIT",
   "scripts": {
-    "build": "webpack",
-    "dev": "webpack-dev-server",
-    "format":
-      "prettier --write --single-quote --print-width=120 --parser=flow --tab-width=2 \"js/**/*.{js,jsx}\"",
+    "build": "webpack -p",
+    "build:dev": "webpack -d",
+    "dev": "NODE_ENV=server nodemon server.js",
+    "format": "prettier --write --single-quote --print-width=120 --parser=flow --tab-width=2 \"js/**/*.{js,jsx}\"",
     "lint": "eslint **/*.{js,jsx} --quiet",
     "test": "jest",
+    "start": "NODE_ENV=server node server.js",
     "test:coverage": "jest --coverage",
     "test:update": "jest -u",
     "watch": "webpack --watch"
@@ -25,6 +26,7 @@
     "enzyme-adapter-react-16": "^1.0.1",
     "enzyme-to-json": "^3.1.1",
     "express": "^4.16.2",
+    "https": "^1.0.0",
     "lodash": "^4.17.4",
     "normalize.css": "^7.0.0",
     "preact": "^8.2.5",
@@ -46,7 +48,10 @@
     "webpack-hot-middleware": "^2.20.0"
   },
   "jest": {
-    "setupFiles": ["raf/polyfill", "./js/__test__/setupTests.js"]
+    "setupFiles": [
+      "raf/polyfill",
+      "./js/__test__/setupTests.js"
+    ]
   },
   "devDependencies": {
     "autoprefixer": "^7.2.1",

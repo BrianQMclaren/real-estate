@@ -1,0 +1,82 @@
+{
+  "property": [
+        {
+          "id": "852223931024",
+          "area": "Westchester County",
+          "address": "6 Garth rd, Scarsdale, NY 10583",
+          "image": "1.jpg",
+          "type": "Single Family Residence / Townhouse",
+          "floorspace": 1264,
+          "beds": 4,
+          "baths": 1,
+          "price": 295000,
+          "parking": 2,
+          "construction": ["basement", "gym"]
+        },
+        {
+          "id": "651263730501",
+          "area": "Westchester County",
+          "address": "39 Sterling ave, White Plains, NY 10606",
+          "image": "2.jpg",
+          "type": "Condo Home Co-Op / Townhouse",
+          "floorspace": 768,
+          "beds": 2,
+          "baths": 2,
+          "price": 445000,
+          "parking": 1,
+          "construction": ["elevator", "gym"]
+        },
+        {
+          "id": "3511539610225",
+          "area": "Westchester County",
+          "address": "62 Highland St, Eastchester, NY 10608",
+          "image": "3.jpg",
+          "type": "Single Family Residence / Townhouse",
+          "floorspace": 1264,
+          "beds": 4,
+          "baths": 1,
+          "price": 325000,
+          "parking": 0,
+          "construction": ["basement", "gym"]
+        },
+        {
+          "id": "2511639410001",
+          "area": "Westchester County",
+          "address": "33 Alden Pl, Bronxville, NY 10708",
+          "image": "4.jpg",
+          "type": "Single Family Residence / Townhouse",
+          "floorspace": 1074,
+          "beds": 3,
+          "baths": 1,
+          "price": 665000,
+          "parking": 0,
+          "construction": ["basement", "gym"]
+        },
+        {
+          "id": "2411639439991",
+          "area": "Westchester County",
+          "address": "261 California rd, Eastchester, NY 10709",
+          "image": "5.jpg",
+          "type": "Condo Home Co-Op / Townhouse",
+          "floorspace": 700,
+          "beds": 1,
+          "baths": 1,
+          "price": 365000,
+          "parking": 1,
+          "construction": ["elevator", "gym"]
+        },
+        {
+          "id": "1522639490009",
+          "area": "Westchester County",
+          "address": "7 Archer rd, Bronxville, NY 10708",
+          "image": "6.jpg",
+          "type": "Single Family Residence",
+          "floorspace": 1800,
+          "beds": 3,
+          "baths": 2,
+          "price": 420000,
+          "parking": 2,
+          "construction": ["basement", "gym"]
+        }
+    ]
+}

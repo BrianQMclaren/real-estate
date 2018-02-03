@@ -1,5 +1,5 @@
 .listings {
-  max-width: 975px;
+  max-width: 950px;
   width: 100%;
   float: left;
   padding: 35px;
@@ -54,12 +54,10 @@
   }
   .listing-img {
     color: #fff;
-    padding: 15px;
     height: 200px;
-    background: url(https://i.ytimg.com/vi/J4rBDsimsmQ/maxresdefault.jpg) no-repeat center center;
+    background-position: center;
     background-size: cover;
-    border-top-left-radius: 5px;
-    border-top-right-radius: 5px;
+
     &:hover {
       .details {
         opacity: 1;
@@ -70,8 +68,11 @@
     }
   }
   .address {
-    font-size: 1.3rem;
+    font-size: 1.5rem;
+    font-weight: bold;
     position: absolute;
+    padding: 0 0.75em;
+    text-shadow: -1px 1px 6px rgba(134, 146, 134, 1);
     bottom: 120px;
     opacity: 1;
     transition: all .8s ease-in-out;
@@ -197,7 +198,7 @@
 
 .col-md-3 {
   width: 33.33%;
-  padding: 0 15px;
+  padding: 15px;
   display: inline-block;
   vertical-align: top;
 }

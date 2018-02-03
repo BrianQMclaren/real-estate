@@ -15,18 +15,18 @@ const Filter = () => (
       </select>
       <div id="slidecontainer">
         <div className="price">
-        <span className="title">price</span>
-        <input name="price" type="range" min="1" max="100" value="55" className="price" />
+          <span className="title">price</span>
+          <input readOnly="true" name="price" type="range" min="1" max="100" value="55" className="price" />
+        </div>
+        <div className="floorspace">
+          <span className="title">floor space</span>
+          <input readOnly="true" name="floorspace" type="range" min="1" max="100" value="35" className="floorspace" />
+        </div>
+        <div className="radius">
+          <span className="title">radius</span>
+          <input readOnly="true" name="radius" type="range" min="1" max="100" value="75" className="radius" />
+        </div>
       </div>
-      <div className="floorspace">
-        <span className="title">floor space</span>
-        <input name="floorspace" type="range" min="1" max="100" value="35" className="floorspace" />
-      </div>
-      <div className="radius">
-        <span className="title">radius</span>
-        <input name="radius" type="range" min="1" max="100" value="75" className="radius" />
-      </div>
-    </div>
       <div className="filters extras">
         <h4>Facilities</h4>
         <label htmlFor="extras">
