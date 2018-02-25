@@ -1,8 +1,8 @@
 // @flow
 
-import React, { PureComponent } from 'react';
+import React, { Component } from 'react';
 
-class Listing extends PureComponent {
+class Listing extends Component {
   shouldComponentUpdate() {
     return false;
   }
