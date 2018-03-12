@@ -68,16 +68,14 @@ input[type='text'] {
 }
 
 #slidecontainer {
-  width: 100%;
+  width: 50%;
   span {
-    display: block;
+    display: inline-block;
   }
 }
 
 .filters .price,
-.filters .floorspace,
-.filters .radius {
-  width: 260px;
+.filters .floorspace {
+  width: 130px;
   margin-top: 15px;
-  margin-bottom: 25px;
 }

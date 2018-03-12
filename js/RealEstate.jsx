@@ -3,7 +3,9 @@
 import React from 'react';
 import Listing from './Listing';
 
+
 const RealEstate = (props: {
+  handleOnChange: Function,
   property: Array<Property>
 }) => (
   <div className="listings">
@@ -30,7 +32,8 @@ const RealEstate = (props: {
 
     <section className="listing-results">
 
-        {props.property.map(properties => <Listing {...properties} key={properties.id}/>)}
+        {props.property
+          .map(properties => <Listing {...properties} key={properties.id} onChange={props.handleOnChange}  />)}
 
     </section>
 
@@ -47,9 +50,6 @@ const RealEstate = (props: {
     </section>
   </div>
 );
-
-
-
 
 
 

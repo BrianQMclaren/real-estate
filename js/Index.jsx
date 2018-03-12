@@ -9,9 +9,9 @@ import load from '../data.json';
 const Index = () => (
   <div className="app">
     <Header />
-    <section className="">
-      <Filter />
-      <RealEstate property={load.property}  />
+    <section>
+      <Filter property={load.property}  />
+      <RealEstate property={load.property} />
     </section>
   </div>
 );

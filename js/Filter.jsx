@@ -1,29 +1,45 @@
 // @flow
 
-import React, { PureComponent } from 'react';
+import React from 'react';
+import load from '../data.json';
 
-class Filter extends PureComponent {
+class Filter extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      onChange: 'this is a debug',
-      price: 0,
-      floorspace: 0,
-      radius: 0,
+      load,
+      min_price: 0,
+      max_price: 10000000,
+      min_floorspace: 0,
+      max_floorspace: 10000,
       elevator: false,
       garage: false,
       basement: false,
       gym: false,
       fireplace: false,
-      swimming_pool: false
-
+      swimming_pool: false,
+      filterData: load
     }
+
     this.handleOnChange = this.handleOnChange.bind(this);
+    this.filterData = this.filterData.bind(this);
   }
+
   handleOnChange (event) {
-    let name = event.target.name;
-    let value = (event.target.type === 'checkbox') ? event.target.checked : event.target.value;
-    this.setState({ [name]: value }, () => { console.log(this.state)});
+    const searchTerm = event.target.name;
+    const value = (event.target.type === 'checkbox') ? event.target.checked : event.target.value;
+    this.setState({ [searchTerm]: value }, () => {
+      console.log(this.state);
+      this.filterData();
+    });
+  }
+
+  filterData() {
+    // const { property } = this.props;
+    const data = this.state.load.property.filter(property => property.price >= this.state.min_price);
+    this.setState({
+      filterData: data
+    });
   }
 
   render() {
@@ -50,15 +66,13 @@ class Filter extends PureComponent {
           <div id="slidecontainer">
             <div className="price">
               <span className="title">price</span>
-              <input readOnly="true" name="price" type="range" min_price="1" max_price="10000000" onChange={this.handleOnChange} className="price" />
+              <input name="min_price" value={this.state.min_price} onChange={this.handleOnChange} className="price" />
+              <input name="max_price" value={this.state.max_price} onChange={this.handleOnChange} className="price" />
             </div>
             <div className="floorspace">
               <span className="title">floor space</span>
-              <input readOnly="true" name="floorspace" type="range" min_floorspace="1" max_floorspace="100000" onChange={this.handleOnChange} className="floorspace" />
-            </div>
-            <div className="radius">
-              <span className="title">radius</span>
-              <input readOnly="true" name="radius" type="range" min_radius="1" max_radius="1000" onChange={this.handleOnChange} className="radius" />
+              <input name="min_floorspace" value={this.state.min_floorspace} onChange={this.handleOnChange} className="floorspace" />
+              <input name="max_floorspace" value={this.state.max_floorspace} onChange={this.handleOnChange} className="floorspace" />
             </div>
           </div>
           <div className="filters extras">

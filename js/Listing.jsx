@@ -1,11 +1,9 @@
 // @flow
 
-import React, { Component } from 'react';
+import React, { PureComponent } from 'react';
 
-class Listing extends Component {
-  shouldComponentUpdate() {
-    return false;
-  }
+class Listing extends PureComponent {
+
   props: { type: string, beds: number, price: number, address: string, image: string, area: string };
   render() {
     return (
@@ -34,8 +32,6 @@ class Listing extends Component {
                   </div>
                 </div>
               </div>
-
-
               <div className="listing-rent">
                 <span className="price">{this.props.price} / month</span>
                 <span className="location">
@@ -45,9 +41,8 @@ class Listing extends Component {
               </div>
             </div>
           </div>
-
-    );
-  }
-}
+        );
+      }
+    }
 
 export default Listing;
