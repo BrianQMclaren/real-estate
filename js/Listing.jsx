@@ -11,7 +11,12 @@ class Listing extends Component {
     props: {
       property: Array<Property>
     }
-    loopListing = () => {
+     loopListing = () => {
+
+       if(this.props.property === undefined || this.props.property.length === 0) {
+         return "Sorry that search doesn't match any listing";
+       }
+
       return this.props.property.map(listing =>
         <div className="col-md-3" key={listing.id}>
           <div className="listing">
@@ -39,7 +44,7 @@ class Listing extends Component {
               </div>
             </div>
             <div className="listing-rent">
-              <span className="price">{listing.price} / month</span>
+              <span className="rent">{listing.price} / month</span>
               <span className="location">
                 <i className="fa fa-map-marker" aria-hidden="true" />
                 {listing.area}

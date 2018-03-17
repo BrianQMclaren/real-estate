@@ -3,43 +3,73 @@
 import React, { PureComponent } from 'react';
 
 class Filter extends PureComponent {
-  props: {
-    handleOnChange: Function,
-    global: string
+  constructor(props) {
+    super(props);
+    this.cities = this.cities.bind(this);
+    this.types = this.types.bind(this);
+    this.beds = this.beds.bind(this);
   }
+  componentWillMount() {
+    this.props.populateAction();
+  }
+  props: {
+    global: string,
+    handleOnChange: Function,
+    populateAction: Function
+  }
+  cities = () => {
+    if(this.props.global.populateFormsData.cities !== undefined) {
+      const { cities } = this.props.global.populateFormsData;
+      return cities.map( (property) => <option key={property} value={property}> {property}</option>);
+    }
+    return false;
+  }
+  types = () => {
+    if(this.props.global.populateFormsData.types !== undefined) {
+      const { types } = this.props.global.populateFormsData;
+      return types.map( (property) => <option key={property} value={property}> {property}</option>);
+    }
+    return false;
+  }
+  beds = () => {
+    if(this.props.global.populateFormsData.beds !== undefined) {
+      const { beds } = this.props.global.populateFormsData;
+      return beds.map( (property) => <option key={property} value={property}> {property}+ BR</option>);
+    }
+    return false;
+  }
+
   render() {
     return (
       <div className="filters">
         <div className="inside">
           <h4 className="filter-title">Filter</h4>
-          <select name="neighbourhood" className="filters neighbourhood" onChange={this.props.handleOnChange}>
-            <option value="WhitePlains">White Plains</option>
-            <option value="Eastchester">Eastchester</option>
-            <option value="Bronxville">Bronxville</option>
-            <option value="Scarsdale">Scarsdale</option>
+          <label htmlFor="city">City</label>
+          <select name="city" className="filters city" onChange={this.props.handleOnChange}>
+            <option value="all">All</option>
+            {this.cities()}
           </select>
-          <select name="housetype" className="filters housetype" onChange={this.props.handleOnChange}>
-            <option value="Single Family">Single Family</option>
-            <option value="Townhouse">Townhouse</option>
-            <option value="Condo">Condo</option>
+          <label htmlFor="type">Home Type</label>
+          <select name="type" className="filters type" onChange={this.props.handleOnChange}>
+            <option value="all">All</option>
+            {this.types()}
           </select>
-          <select name="bedroom" className="filters bedroom" onChange={this.props.handleOnChange}>
-            <option value="1 BR">1 BR</option>
-            <option value="2 BR">2 BR</option>
-            <option value="3 BR">3 BR</option>
+          <label htmlFor="beds">Beds</label>
+          <select name="beds" className="filters beds" onChange={this.props.handleOnChange}>
+            {this.beds()}
           </select>
-          <div id="slidecontainer">
-            <div className="price">
-              <span className="title">price</span>
-              <input name="min_price" value={this.props.global.min_price} onChange={this.props.handleOnChange} className="price" />
-              <input name="max_price" value={this.props.global.max_price} onChange={this.props.handleOnChange} className="price" />
+          <form>
+            <div className="m-price">
+                <label htmlFor="price">Price</label>
+                <input name="min_price" value={this.props.global.min_price} onChange={this.props.handleOnChange} className="price" />
+                <input name="max_price" value={this.props.global.max_price} onChange={this.props.handleOnChange} className="price" />
             </div>
-            <div className="floorspace">
-              <span className="title">floor space</span>
-              <input name="min_floorspace" value={this.props.global.min_floorspace} onChange={this.props.handleOnChange} className="floorspace" />
-              <input name="max_floorspace" value={this.props.global.max_floorspace} onChange={this.props.handleOnChange} className="floorspace" />
+            <div className="m-floorspace">
+                <label htmlFor="floorspace">Floor Space</label>
+                <input name="min_floorspace" value={this.props.global.min_floorspace} onChange={this.props.handleOnChange} className="floorspace" />
+                <input name="max_floorspace" value={this.props.global.max_floorspace} onChange={this.props.handleOnChange} className="floorspace" />
             </div>
-          </div>
+          </form>
           <div className="filters extras">
             <h4>Facilities</h4>
             <label htmlFor="extras">

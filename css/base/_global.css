@@ -1,3 +1,14 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+
 body {
   font-family: 'mr-eaves-xl-modern', sans-serif;
 }
@@ -22,7 +33,7 @@ a {
 h4 {
   font-size: 1rem;
   margin-bottom: 25px;
-  color: $lightbrown;
+  color: $boldgray;
 }
 
 hr {
@@ -31,6 +42,25 @@ hr {
   border: 0;
   height: 1px;
   background: $lightgray;
+}
+
+label {
+  display: block;
+  margin-top: 1em;
+  color: $boldgray;
+}
+
+input {
+  display: inline-block;
+  margin-top: 1em;
+}
+
+input[type=value] {
+  color: $boldgray;
+}
+
+nav {
+  float: right;
 }
 
 .fa {
@@ -62,8 +92,4 @@ hr {
 .logo {
   float: left;
   display: inline;
-}
-
-nav {
-  float: right;
 }
