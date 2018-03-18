@@ -503,7 +503,7 @@ input {
 }
 
 input[type=value] {
-  color: #50555c;
+  color: #dadde2;
 }
 
 nav {
@@ -631,7 +631,7 @@ nav {
   }
 
 .listing-heading input {
-    color: #dadde2;
+    color: #50555c;
     font-size: 1.2rem;
     float: right;
     margin-top: 30px;
@@ -842,4 +842,11 @@ nav {
 .col-md-9 {
   width: 75%;
   display: inline-block;
+}
+
+.col-lg-6 {
+  width: 50%;
+  padding: 15px;
+  display: inline-block;
+  vertical-align: top;
 }

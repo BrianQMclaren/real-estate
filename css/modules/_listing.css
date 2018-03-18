@@ -13,7 +13,7 @@
     margin: 0;
   }
   input {
-    color: $lightgray;
+    color: $boldgray;
     font-size: 1.2rem;
     float: right;
     margin-top: 30px;
@@ -206,4 +206,11 @@
 .col-md-9 {
   width: 75%;
   display: inline-block;
+}
+
+.col-lg-6 {
+  width: 50%;
+  padding: 15px;
+  display: inline-block;
+  vertical-align: top;
 }

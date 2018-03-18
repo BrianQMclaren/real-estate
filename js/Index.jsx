@@ -25,12 +25,24 @@ class Index extends Component {
       fireplace: false,
       swimming_pool: false,
       filterData: load.property,
-      populateFormsData: ''
+      populateFormsData: '',
+      sortBy: 'price-dsc',
+      view: 'grid',
+      search: ''
     }
 
     this.handleOnChange = this.handleOnChange.bind(this);
     this.filterData = this.filterData.bind(this);
     this.populateForms = this.populateForms.bind(this);
+    this.handleOnChangeView = this.handleOnChangeView.bind(this);
+  }
+
+  componentWillMount() {
+    const sortPrice = this.state.filterData.sort((a, b) => a.price - b.price);
+
+    this.setState({
+      sortPrice
+    })
   }
 
   handleOnChange (event) {
@@ -39,6 +51,13 @@ class Index extends Component {
     this.setState({ [searchTerm]: value }, () => {
       console.log(this.state);
       this.filterData();
+    });
+  }
+
+  handleOnChangeView (changeView) {
+    return ( e => {
+      e.preventDefault();
+      this.setState({ view: changeView });
     });
   }
 
@@ -56,6 +75,26 @@ class Index extends Component {
       data = data.filter(property => property.type === this.state.type);
     }
 
+    if(this.state.sortBy === 'price-dsc') {
+      data = data.sort((a, b) => a.price - b.price);
+    }
+
+    if(this.state.sortBy === 'price-asc') {
+      data = data.sort((a, b) => b.price - a.price);
+    }
+
+    if(this.state.search !== '') {
+      data = data.filter(property => {
+        const city = property.city.toLowerCase();
+        const searchText = this.state.search.toLowerCase();
+        const n = city.match(searchText);
+        if(n !== null) {
+          return true;
+        }
+        return false;
+      })
+    }
+
     this.setState({
       filterData: data
     });
@@ -67,12 +106,15 @@ class Index extends Component {
     let cities = this.state.load.property.map(property => property.city);
     // set object stores unique values of data then converts from a set to an new array
     cities = Array.from(new Set(cities));
+    cities = cities.sort();
 
     let types = this.state.load.property.map(property => property.type);
     types = Array.from(new Set(types));
+    types = types.sort();
 
     let beds = this.state.load.property.map(property => property.beds);
     beds = Array.from(new Set(beds));
+    beds = beds.sort();
 
     this.setState({
       populateFormsData: {
@@ -90,7 +132,7 @@ class Index extends Component {
         <Header />
         <section>
           <Filter property={load.property} handleOnChange={this.handleOnChange} global={this.state} populateAction={this.populateForms} />
-          <Listing property={this.state.filterData}  />
+          <Listing property={this.state.filterData} global={this.state} handleOnChange={this.handleOnChange} handleOnChangeView={this.handleOnChangeView}  />
         </section>
       </div>
     )

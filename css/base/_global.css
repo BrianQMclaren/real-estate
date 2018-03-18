@@ -56,7 +56,7 @@ input {
 }
 
 input[type=value] {
-  color: $boldgray;
+  color: $lightgray;
 }
 
 nav {
