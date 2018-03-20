@@ -23,7 +23,8 @@ class Index extends Component {
       basement: false,
       gym: false,
       fireplace: false,
-      swimming_pool: false,
+      pool: false,
+      landry: false,
       filterData: load.property,
       populateFormsData: '',
       sortBy: 'price-dsc',
@@ -81,6 +82,34 @@ class Index extends Component {
 
     if(this.state.sortBy === 'price-asc') {
       data = data.sort((a, b) => b.price - a.price);
+    }
+
+    if(this.state.elevator === true) {
+      data = data.filter(property => property.construction.includes('elevator'));
+    }
+
+    if(this.state.basement === true) {
+      data = data.filter(property => property.construction.includes('basement'));
+    }
+
+    if(this.state.garage === true) {
+      data = data.filter(property => property.construction.includes('garage'));
+    }
+
+    if(this.state.gym === true) {
+      data = data.filter(property => property.construction.includes('gym'));
+    }
+
+    if(this.state.fireplace === true) {
+      data = data.filter(property => property.construction.includes('fireplace'));
+    }
+
+    if(this.state.pool === true) {
+      data = data.filter(property => property.construction.includes('pool'));
+    }
+
+    if(this.state.landry === true) {
+      data = data.filter(property => property.construction.includes('landry'));
     }
 
     if(this.state.search !== '') {

@@ -12,7 +12,7 @@
           "baths": 1,
           "price": 295000,
           "parking": 2,
-          "construction": ["basement", "gym"]
+          "construction": ["fireplace", "landry"]
         },
         {
           "id": "651263730501",
@@ -26,7 +26,7 @@
           "baths": 2,
           "price": 445000,
           "parking": 1,
-          "construction": ["elevator", "gym"]
+          "construction": ["elevator", "garage"]
         },
         {
           "id": "3511539610225",
@@ -54,7 +54,7 @@
           "baths": 1,
           "price": 665000,
           "parking": 0,
-          "construction": ["landry", "gym"]
+          "construction": ["fireplace", "gym"]
         },
         {
           "id": "2411639439991",
@@ -68,7 +68,7 @@
           "baths": 1,
           "price": 265000,
           "parking": 1,
-          "construction": ["dishwasher", "gym"]
+          "construction": ["landry", "gym"]
         },
         {
           "id": "1522639490009",
@@ -82,7 +82,7 @@
           "baths": 2,
           "price": 765000,
           "parking": 3,
-          "construction": ["basement", "pool"]
+          "construction": ["basement", "fireplace"]
         },
         {
           "id": "19639490088",
@@ -96,7 +96,7 @@
           "baths": 1,
           "price": 215000,
           "parking": 3,
-          "construction": ["elevator", "gym"]
+          "construction": ["elevator", "garage"]
         },
         {
           "id": "1122459390065",
@@ -124,7 +124,7 @@
           "baths": 1,
           "price": 650000,
           "parking": 3,
-          "construction": ["basement", "pool"]
+          "construction": ["garage", "landry"]
         }
     ]
 }

@@ -38,7 +38,7 @@ class Listing extends Component {
                   <div className="listing-details">
                     <div className="floor-space">
                       <i className="fa fa-square-o" aria-hidden="true" />
-                      <span>1000 ft&sup2;</span>
+                      <span>{listing.floorspace}&sup2;</span>
                     </div>
                     <div className="bedrooms">
                       <i className="fa fa-bed" aria-hidden="true" />
@@ -74,7 +74,7 @@ class Listing extends Component {
                   <div className="listing-details">
                     <div className="floor-space">
                       <i className="fa fa-square-o" aria-hidden="true" />
-                      <span>1000 ft&sup2;</span>
+                      <span>{listing.floorspace} ft&sup2;</span>
                     </div>
                     <div className="bedrooms">
                       <i className="fa fa-bed" aria-hidden="true" />
@@ -109,7 +109,7 @@ class Listing extends Component {
         </section>
 
         <section className="listing-sort">
-          <span className="results">3920 results found</span>
+          <span className="results">{this.props.global.filterData.length} results found</span>
           <div className="listing-sortOptions">
             <select name="sortBy" className="sortBy" onChange={this.props.handleOnChange}>
               <option value="price-dsc">Lowest Price</option>

@@ -1,6 +1,6 @@
 @import 'base/_normalize';
 @import 'base/_variables';
-@import 'base/_mixins';
+@import 'base/_grid';
 @import 'base/_global';
 @import 'modules/_filter';
 @import 'modules/_listing';

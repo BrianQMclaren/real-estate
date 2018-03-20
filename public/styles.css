@@ -446,6 +446,18 @@ template {
   display: none;
 }
 
+// Grid
+
+$g-col-width: 65px;
+
+// Breakpoints
+
+$brkpoint-sm: 1px;
+
+.grid {
+  color: red;
+}
+
 html {
   box-sizing: border-box;
 }
@@ -544,6 +556,7 @@ nav {
 .filters {
   float: left;
   background: snow;
+  height: 100%;
 }
 
 .filters .inside {

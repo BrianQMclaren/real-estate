@@ -1,6 +1,7 @@
 .filters {
   float: left;
   background: snow;
+  height: 100%;
 
 
   .inside {

@@ -85,6 +85,10 @@ class Filter extends PureComponent {
               <input name="basement" value="basement" type="checkbox" onChange={this.props.handleOnChange}/>
             </label>
             <label htmlFor="extras">
+              <span>Landry</span>
+              <input name="landry" value="landry" type="checkbox" onChange={this.props.handleOnChange}/>
+            </label>
+            <label htmlFor="extras">
               <span>Gym</span>
               <input name="gym" value="gym" type="checkbox" onChange={this.props.handleOnChange}/>
             </label>
@@ -94,7 +98,7 @@ class Filter extends PureComponent {
             </label>
             <label htmlFor="extras">
               <span>Swimming pool</span>
-              <input name="swimming_pool" value="swimming pool" type="checkbox" onChange={this.props.handleOnChange}/>
+              <input name="pool" value="pool" type="checkbox" onChange={this.props.handleOnChange}/>
             </label>
           </div>
         </div>

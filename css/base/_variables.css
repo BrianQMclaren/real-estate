@@ -7,3 +7,15 @@ $gray: #faf7f5;
 $lightgray: #dadde2;
 $darkgray: #828d9d;
 $boldgray: #50555c;
+// Grid
+
+$g-col-width: 65px;
+$g-gutter-width: 20px;
+$g-col-count: 12;
+$g-cont-max-w: 1050px;
+
+// Breakpoints
+
+$brkpoint-sm: 1px;
+$brkpoint-md: 768px;
+$brkpoint-lg: 1100px;
