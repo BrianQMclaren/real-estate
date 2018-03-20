@@ -28,7 +28,7 @@ local machine for development and testing purposes.
 ```
 Clone or download the project files from my repository
 
-git clone https://github.com/BrianQMclaren/book-club-react.git
+git clone https://github.com/BrianQMclaren/Real-Estate-App
 
 Run npm install in your terminal to get all of the packages
 
