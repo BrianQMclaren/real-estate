@@ -1,7 +1,7 @@
 # Real-Estate-App
 
 A web app built with react, jest, flow, and webpack. Ideally users can search
-for homes in there area. Still in development...
+for homes in there area.
 
 ### Inspiration
 
